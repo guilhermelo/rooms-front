@@ -1,0 +1,57 @@
+<h4 class="text-center" style="margin-top: 100px;"> Register to embrace a new world!</h4>
+
+<form [formGroup]="signUpForm" class="form mt-4" (submit)="signup()">
+
+    <div class="form-group"> 
+        <input type="text" formControlName="username" placeholder="username" class="form-control">
+        <message-validator *ngIf="signUpForm.get('username').errors?.required" message="Username obrigatório">
+        </message-validator>
+        <message-validator *ngIf="signUpForm.get('username').errors?.minlength" message="Tamanho mínimo de 5 caracteres">
+        </message-validator>
+        <message-validator *ngIf="signUpForm.get('username').errors?.maxlength" message="Tamanho máximo de 40 caracteres">
+        </message-validator>
+        <message-validator *ngIf="signUpForm.get('username').errors?.usernameExists" message="Desculpe, username já utilizado :(">
+        </message-validator>
+    </div>
+
+   <div class="form-group">
+        <input type="text" formControlName="name" placeholder="name" class="form-control">
+
+        <message-validator *ngIf="signUpForm.get('username').errors?.required" message="Nome obrigatório">
+        </message-validator>
+
+        <message-validator *ngIf="signUpForm.get('name').errors?.maxlength" message="Nome deve ser menor que 50">
+        </message-validator>
+
+        <message-validator *ngIf="signUpForm.get('name').errors?.minlength" message="Nome deve ser maior que 10">
+        </message-validator>
+    </div>
+
+    <div class="form-group">
+        <input type="email" formControlName="email" placeholder="email" class="form-control" autofocus>
+
+        <message-validator *ngIf="signUpForm.get('username').errors?.required" message="Email obrigatório">
+        </message-validator>
+
+        <message-validator *ngIf="signUpForm.get('email').errors?.email" message="Email incorreto">
+        </message-validator>
+    </div>
+
+    
+    <div class="form-group">
+        <input type="password" formControlName="password" placeholder="password" class="form-control">
+
+        <message-validator *ngIf="signUpForm.get('password').errors?.required" message="Senha obrigatória">
+        </message-validator>
+
+        <message-validator *ngIf="signUpForm.get('password').errors?.maxlength" message="Nome deve ser menor que 20">
+        </message-validator>
+
+        <message-validator *ngIf="signUpForm.get('password').errors?.minlength" message="Senha deve ser maior que 7">
+        </message-validator>
+    </div>
+
+    <!-- Verifica se o formulário está válido e se não está com validação assincrona pendente -->
+    <!--  -->
+    <button [disabled]="signUpForm.invalid || signUpForm.pending" class="btn btn-primary btn-block">Register</button>
+</form>

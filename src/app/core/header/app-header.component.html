@@ -1,0 +1,17 @@
+<header class="fixed-top">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand">Rooms</a>
+        <!-- usando pipe async no template para pegar o valor do subscribe -->
+        <div *ngIf="(user$ | async) as user; else login">
+            <i class="fa fa-user-circle mr-1"></i>
+            <a class="mr-1">{{ user.username }}</a>
+            <a (click)="logout()" class="login-link grab-cursor">Logout</a>
+        </div>
+
+        <ng-template #login>
+            <span class="naxbar-text">
+                <a [routerLink]="['home', 'signin']" class="login-link">Please, login!</a>
+            </span>
+        </ng-template>
+    </nav>
+</header>
