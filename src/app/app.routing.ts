@@ -11,6 +11,10 @@ const routes: Routes = [
     {
         path: 'home',
         loadChildren: './home/home.module#HomeModule'
+    },
+    {
+        path: 'rooms',
+        loadChildren: './rooms/rooms.module#RoomsModule'
     }
 ];
 

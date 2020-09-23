@@ -1,0 +1,722 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Connecting ...
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - File URLs in stacktrace frames are peekable and clickable.
+clj::user=> 
+(1 2)
+3
+[4 [5 6]]
+()
+clj::user=> 
+(2 1)
+clj::user=> 
+; Execution error (IllegalArgumentException) at user/eval7377$fn$iter (REPL:9).
+; Don't know how to create ISeq from: java.lang.Long
+[{:file "RT.java" :line 553 :method "seqFrom" :flags [:java]}
+ {:file "RT.java" :line 533 :method "seq" :flags [:java]}
+ {:file "RT.java" :line 683 :method "cons" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:29" :fn "cons"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:29" :fn "cons"  :method "invoke" :flags [:dup :clj]}
+ {:file "NO_SOURCE_FILE" :line 9 :fn "eval7377/fn/iter"  :method "invoke" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 7 :fn "eval7377/fn/iter"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 2 :fn "eval7377/fn"  :method "invoke" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 1 :fn "eval7377"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 1 :fn "eval7377"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "Compiler.java" :line 7176 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+"Lista:" ((1 2) 3 [4 [5 6]])
+"Final:" ()
+"Lista:" (1 2)
+"Final:" ()
+"Lista:" (2)
+"Final:" (1)
+"Lista:" ()
+"Final:" (2 1)
+(2 1)
+clj::user=> 
+; Syntax error compiling at (Untitled-1:9:21).
+; Unable to resolve symbol: lista in this context
+[{:file "Compiler.java" :line 6808 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 3888 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7108 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 3888 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7108 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 6120 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7106 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 2837 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7106 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 6120 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7106 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 2837 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7106 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 6120 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 5467 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 4029 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7104 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7094 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 3820 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7108 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 6120 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 5467 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 4029 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7104 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7094 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 3820 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7108 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 6120 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 5467 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 4029 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7104 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7173 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+(1 2 3 [4 [5 6]])
+clj::user=> 
+"Primeiro:" (1 2)
+"Resto:" (3 [4 [5 6]])
+"Final:" ()
+"Primeiro:" 1
+"Resto:" (1 2 3 [4 [5 6]])
+"Final:" ()
+(1 2 3 [4 [5 6]])
+clj::user=> 
+"Primeiro:" (1 2)
+"Resto:" (3 [4 [5 6]])
+"Final:" ()
+"Primeiro:" 3
+"Resto:" ([4 [5 6]])
+"Final:" ()
+"Primeiro:" 1
+"Resto:" ([4 [5 6]])
+"Final:" ()
+([4 [5 6]])
+clj::user=> 
+"Primeiro:" (1 2)
+"Resto:" (3 [4 [5 6]])
+"Final:" ()
+"Primeiro:" 3
+"Resto:" ([4 [5 6]])
+"Final:" ()
+"Primeiro:" 1
+"Resto:" 3
+"Final:" ()
+; Execution error (IllegalArgumentException) at user/eval7410$fn$iter (REPL:6).
+; Don't know how to create ISeq from: java.lang.Long
+[{:file "RT.java" :line 553 :method "seqFrom" :flags [:java]}
+ {:file "RT.java" :line 533 :method "seq" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:137" :fn "seq"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6206" :fn "empty?"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6206" :fn "empty?"  :method "invoke" :flags [:dup :clj]}
+ {:file "NO_SOURCE_FILE" :line 6 :fn "eval7410/fn/iter"  :method "invoke" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 10 :fn "eval7410/fn/iter"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 2 :fn "eval7410/fn"  :method "invoke" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 1 :fn "eval7410"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 1 :fn "eval7410"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "Compiler.java" :line 7176 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+[1 2 3 4 5 6]
+clj::user=> 
+; Execution error (ArityException) at user/eval7421 (REPL:10).
+; Wrong number of args (1) passed to: user/eval7421/myflatten--7422
+[{:file "AFn.java" :line 429 :method "throwArity" :flags [:java]}
+ {:file "AFn.java" :line 32 :method "invoke" :flags [:java]}
+ {:file "NO_SOURCE_FILE" :line 10 :fn "eval7421"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 10 :fn "eval7421"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "Compiler.java" :line 7176 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+[1 2 3 4 5 6]
+clj::user=> 
+[1]
+[1 2]
+[1 2 3]
+[1 2 3 4]
+[1 2 3 4 5]
+[1 2 3 4 5 6]
+[1 2 3 4 5 6]
+clj::user=> 
+[]
+[1]
+[1 2]
+[1 2 3]
+[1 2 3]
+[1 2 3 4]
+[1 2 3 4]
+[1 2 3 4 5]
+[1 2 3 4 5 6]
+[1 2 3 4 5 6]
+clj::user=> 
+[1 2 3 4 5 6]
+clj::user=> 
+; Execution error (ArityException) at user/pack-sequence (REPL:2).
+; Wrong number of args (2) passed to: user/pack-sequence/fn--7444
+[{:file "AFn.java" :line 429 :method "throwArity" :flags [:java]}
+ {:file "AFn.java" :line 36 :method "invoke" :flags [:java]}
+ {:file "PersistentVector.java" :line 329 :method "reduce" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6823" :fn "reduce"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6810" :fn "reduce"  :method "invoke" :flags [:clj]}
+ {:file "NO_SOURCE_FILE" :line 2 :fn "pack-sequence"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 1 :fn "pack-sequence"  :method "invoke" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 5 :fn "eval7447"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 5 :fn "eval7447"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "Compiler.java" :line 7176 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+; Execution error (ArityException) at user/pack-sequence (REPL:2).
+; Wrong number of args (2) passed to: user/pack-sequence/fn--7449
+[{:file "AFn.java" :line 429 :method "throwArity" :flags [:java]}
+ {:file "AFn.java" :line 36 :method "invoke" :flags [:java]}
+ {:file "PersistentVector.java" :line 343 :method "reduce" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6827" :fn "reduce"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6810" :fn "reduce"  :method "invoke" :flags [:clj]}
+ {:file "NO_SOURCE_FILE" :line 2 :fn "pack-sequence"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 1 :fn "pack-sequence"  :method "invoke" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 5 :fn "eval7452"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 5 :fn "eval7452"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "Compiler.java" :line 7176 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+; Execution error (ArityException) at user/pack-sequence (REPL:2).
+; Wrong number of args (2) passed to: user/pack-sequence/fn--7454
+[{:file "AFn.java" :line 429 :method "throwArity" :flags [:java]}
+ {:file "AFn.java" :line 36 :method "invoke" :flags [:java]}
+ {:file "PersistentVector.java" :line 329 :method "reduce" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6823" :fn "reduce"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6810" :fn "reduce"  :method "invoke" :flags [:clj]}
+ {:file "NO_SOURCE_FILE" :line 2 :fn "pack-sequence"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 1 :fn "pack-sequence"  :method "invoke" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 5 :fn "eval7457"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 5 :fn "eval7457"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "Compiler.java" :line 7176 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+; Execution error (ArityException) at user/pack-sequence (REPL:2).
+; Wrong number of args (2) passed to: user/pack-sequence/fn--7459
+[{:file "AFn.java" :line 429 :method "throwArity" :flags [:java]}
+ {:file "AFn.java" :line 36 :method "invoke" :flags [:java]}
+ {:file "PersistentVector.java" :line 343 :method "reduce" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6827" :fn "reduce"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6810" :fn "reduce"  :method "invoke" :flags [:clj]}
+ {:file "NO_SOURCE_FILE" :line 2 :fn "pack-sequence"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 1 :fn "pack-sequence"  :method "invoke" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 5 :fn "eval7462"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 5 :fn "eval7462"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "Compiler.java" :line 7176 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+; Execution error (ArityException) at user/pack-sequence (REPL:2).
+; Wrong number of args (2) passed to: clojure.core/inc
+[{:file "AFn.java" :line 429 :method "throwArity" :flags [:java]}
+ {:file "AFn.java" :line 36 :method "invoke" :flags [:java]}
+ {:file "PersistentVector.java" :line 343 :method "reduce" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6827" :fn "reduce"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6810" :fn "reduce"  :method "invoke" :flags [:clj]}
+ {:file "NO_SOURCE_FILE" :line 2 :fn "pack-sequence"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 1 :fn "pack-sequence"  :method "invoke" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 4 :fn "eval7465"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 4 :fn "eval7465"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "Compiler.java" :line 7176 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+; Execution error (ArityException) at user/pack-sequence (REPL:2).
+; Wrong number of args (2) passed to: clojure.core/inc
+[{:file "AFn.java" :line 429 :method "throwArity" :flags [:java]}
+ {:file "AFn.java" :line 36 :method "invoke" :flags [:java]}
+ {:file "PersistentVector.java" :line 343 :method "reduce" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6827" :fn "reduce"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6810" :fn "reduce"  :method "invoke" :flags [:clj]}
+ {:file "NO_SOURCE_FILE" :line 2 :fn "pack-sequence"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 1 :fn "pack-sequence"  :method "invoke" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 4 :fn "eval7468"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 4 :fn "eval7468"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "Compiler.java" :line 7176 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+[1 1 2 1 1 1 3 3]
+clj::user=> 
+; Execution error (ArityException) at user/pack-sequence (REPL:2).
+; Wrong number of args (2) passed to: clojure.core/inc
+[{:file "AFn.java" :line 429 :method "throwArity" :flags [:java]}
+ {:file "AFn.java" :line 36 :method "invoke" :flags [:java]}
+ {:file "PersistentVector.java" :line 329 :method "reduce" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6823" :fn "reduce"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6810" :fn "reduce"  :method "invoke" :flags [:clj]}
+ {:file "NO_SOURCE_FILE" :line 2 :fn "pack-sequence"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 1 :fn "pack-sequence"  :method "invoke" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 4 :fn "eval7474"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 4 :fn "eval7474"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "Compiler.java" :line 7176 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+13
+clj::user=> 
+15
+clj::user=> 
+; Syntax error compiling at (Untitled-1:2:12).
+; Unable to resolve symbol: x in this context
+[{:file "Compiler.java" :line 6808 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 3820 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7108 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 6120 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 5467 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 4029 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7104 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 3888 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7108 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 6120 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 5467 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 4029 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7104 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7094 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 38 :method "access$300" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 596 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7106 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 7180 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+; Execution error (ArityException) at user/pack-sequence (REPL:2).
+; Wrong number of args (2) passed to: user/pack-sequence/fn--7485
+[{:file "AFn.java" :line 429 :method "throwArity" :flags [:java]}
+ {:file "AFn.java" :line 36 :method "invoke" :flags [:java]}
+ {:file "PersistentVector.java" :line 343 :method "reduce" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6827" :fn "reduce"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6810" :fn "reduce"  :method "invoke" :flags [:clj]}
+ {:file "NO_SOURCE_FILE" :line 2 :fn "pack-sequence"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 1 :fn "pack-sequence"  :method "invoke" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 4 :fn "eval7488"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 4 :fn "eval7488"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "Compiler.java" :line 7176 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+; Execution error (ArityException) at user/pack-sequence (REPL:2).
+; Wrong number of args (2) passed to: user/pack-sequence/fn--7490
+[{:file "AFn.java" :line 429 :method "throwArity" :flags [:java]}
+ {:file "AFn.java" :line 36 :method "invoke" :flags [:java]}
+ {:file "PersistentVector.java" :line 343 :method "reduce" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6827" :fn "reduce"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6810" :fn "reduce"  :method "invoke" :flags [:clj]}
+ {:file "NO_SOURCE_FILE" :line 2 :fn "pack-sequence"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 1 :fn "pack-sequence"  :method "invoke" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 5 :fn "eval7493"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 5 :fn "eval7493"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "Compiler.java" :line 7176 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+[]
+1
+[]
+1
+[]
+2
+[]
+1
+[]
+1
+[]
+1
+[]
+3
+[]
+3
+[]
+clj::user=> 
+; Execution error (ArityException) at user/eval7500 (REPL:10).
+; Wrong number of args (2) passed to: user/eval7500/fn--7501
+[{:file "AFn.java" :line 429 :method "throwArity" :flags [:java]}
+ {:file "AFn.java" :line 36 :method "invoke" :flags [:java]}
+ {:file "PersistentList.java" :line 134 :method "reduce" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6823" :fn "reduce"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6810" :fn "reduce"  :method "invoke" :flags [:clj]}
+ {:file "NO_SOURCE_FILE" :line 10 :fn "eval7500"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 10 :fn "eval7500"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "Compiler.java" :line 7176 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+3
+clj::user=> 
+[]
+1
+[]
+1
+[]
+2
+[]
+1
+[]
+1
+[]
+1
+[]
+3
+[]
+3
+[]
+clj::user=> 
+"Atual: " 1
+"Acumulado: " []
+"Atual: " 1
+"Acumulado: " []
+"Atual: " 2
+"Acumulado: " []
+"Atual: " 1
+"Acumulado: " []
+"Atual: " 1
+"Acumulado: " []
+"Atual: " 1
+"Acumulado: " []
+"Atual: " 3
+"Acumulado: " []
+"Atual: " 3
+"Acumulado: " []
+[]
+clj::user=> 
+"Atual: " 1
+"Acumulado: " []
+"Atual: " 1
+"Acumulado: " 1
+; Execution error (IllegalArgumentException) at user/pack-sequence$fn (REPL:5).
+; Don't know how to create ISeq from: java.lang.Long
+[{:file "RT.java" :line 553 :method "seqFrom" :flags [:java]}
+ {:file "RT.java" :line 533 :method "seq" :flags [:java]}
+ {:file "RT.java" :line 710 :method "next" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:64" :fn "next"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:268" :fn "last"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:267" :fn "last"  :method "invoke" :flags [:clj]}
+ {:file "NO_SOURCE_FILE" :line 5 :fn "pack-sequence/fn"  :method "invoke" :flags [:repl :clj]}
+ {:file "PersistentVector.java" :line 343 :method "reduce" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6827" :fn "reduce"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:6810" :fn "reduce"  :method "invoke" :flags [:clj]}
+ {:file "NO_SOURCE_FILE" :line 2 :fn "pack-sequence"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 1 :fn "pack-sequence"  :method "invoke" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 9 :fn "eval7521"  :method "invokeStatic" :flags [:repl :clj]}
+ {:file "NO_SOURCE_FILE" :line 9 :fn "eval7521"  :method "invoke" :flags [:dup :repl :clj]}
+ {:file "Compiler.java" :line 7176 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+((1 1) (2) (1 1 1) (3 3))
+clj::user=> 
+; Error printing return value (ClassCastException) at clojure.core/partition-by$fn (core.clj:7199).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'bootstrap')
+[{:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:419" :fn "repl/read-eval-print"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/guilherme/.lein/self-installs/leiningen-2.9.1-standalone.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::user=> 
+((1 1) (2) (1 1 1 3 3))
+clj::user=> 
+((1 1) (2) (1 1 1) (3 3))
+clj::user=> 

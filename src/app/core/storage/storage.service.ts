@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
+import { User } from '../user/user';
 
 const KEY = 'authtoken';
 
 @Injectable()
-export class TokenService {
+export class StorageService {
 
     hasToken() {
         return !!this.getToken();
@@ -20,5 +21,4 @@ export class TokenService {
     removeToken() {
         window.localStorage.removeItem(KEY);
     }
-
 }

@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Room } from 'src/app/model/room';
 import { HttpClient } from '@angular/common/http';
 import { Response } from 'src/app/model/response';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
     providedIn: 'root'
@@ -13,6 +14,9 @@ export class InicialService {
     }
 
     getRooms(): Observable<Response<Room>> {
-        return this.http.get<Response<Room>>('http://localhost:8080/rooms/v1/rooms');
+
+        const uri = `${environment.apiUrl}/v1/rooms`;
+
+        return this.http.get<Response<Room>>(uri);
     }
 }

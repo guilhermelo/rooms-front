@@ -3,4 +3,5 @@ export class Room {
     name: string;
     description: string;
     amountPeople: number;
+    userId: string;
 }

@@ -1,5 +1,5 @@
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
-import { TokenService } from '../token/token.service';
+import { StorageService } from '../storage/storage.service';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class AuthInterceptor implements HttpInterceptor {
 
-    constructor(private tokenService: TokenService) {
+    constructor(private tokenService: StorageService) {
     }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

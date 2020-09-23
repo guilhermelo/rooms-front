@@ -13,7 +13,7 @@ export class InitialComponent implements OnInit {
 
   constructor(private inicialService: InicialService) {
     this.inicialService.getRooms().subscribe(response => {
-      this.roomCards = response.data.map(item => new Card(item.name, item.description));
+      this.roomCards = response.data.map(item => new Card(item.name, item.description, item.id));
     });
   }
 

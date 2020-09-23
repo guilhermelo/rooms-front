@@ -1,8 +1,10 @@
-<div class="col-md-4 mt-5 border border-dark">
-    <div class="card-header">
-        {{ card.header }}
+<a [routerLink]="['/rooms', card.id]">
+    <div class="col-md-4 mt-5 border border-dark">
+        <div class="card-header">
+            {{ card.header }}
+        </div>
+        <div class="card-body">
+            {{ card.body }}
+        </div>
     </div>
-    <div class="card-body">
-        {{ card.body }}
-    </div>
-</div>
+</a>

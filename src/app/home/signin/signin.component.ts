@@ -52,8 +52,4 @@ export class SignInComponent implements OnInit {
             }
         });
     }
-
-    doSignup() {
-        this.router.navigate(['signup']);
-    }
 }
