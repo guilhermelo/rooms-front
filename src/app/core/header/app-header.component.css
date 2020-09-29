@@ -1,6 +1,6 @@
 .grab-cursor {
     cursor: -webkit-grabbing; 
-    cursor: grabbing;
+    cursor: pointer;
 }
 
 .login-link {

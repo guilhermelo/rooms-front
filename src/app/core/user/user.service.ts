@@ -29,8 +29,7 @@ export class UserService {
 
     getLoggedUser(): User {
         const token = this.storageService.getToken();
-        const user = jwtDecode(token) as User;
-        this.userName = user.username;
+        const user: User = jwtDecode(token);
         return user;
     }
 

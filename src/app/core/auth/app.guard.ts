@@ -18,7 +18,7 @@ export class AppGuard implements CanActivate {
             return true;
         }
 
-        this.router.navigate(['home', 'signin']);
+        this.router.navigate(['home', 'signin'], { queryParams: { redirect: state.url } });
         return true;
     }
 

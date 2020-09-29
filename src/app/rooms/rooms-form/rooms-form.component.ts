@@ -5,6 +5,7 @@ import { RoomService } from '../rooms.service';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/core/user/user.service';
 import { User } from 'src/app/core/user/user';
+import { NotificationService } from 'src/app/core/notification/notification.service';
 
 @Component({
     selector: 'room-form',
@@ -17,6 +18,7 @@ export class RoomsFormComponent implements OnInit {
     constructor(private formBuilder: FormBuilder,
                 private roomService: RoomService,
                 private userService: UserService,
+                private notificationService: NotificationService,
                 private router: Router) {
     }
 
@@ -46,6 +48,7 @@ export class RoomsFormComponent implements OnInit {
 
         this.roomService.save(room).subscribe((savedRoom) => {
             this.router.navigate(['']);
+            this.notificationService.success('Mensagem inserida com sucesso!');
         });
     }
 
